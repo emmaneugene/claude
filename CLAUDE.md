@@ -15,4 +15,3 @@
 - NEVER skip hooks (`--no-verify`)
 - Block-at-submit hooks for test validation preferred
 - Reference file locations as `path:line_number` in commits
-- NEVER add `Co-Authored-By` or any co-author trailer to commits

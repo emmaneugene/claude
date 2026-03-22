@@ -47,6 +47,10 @@
   "outputStyle": "technical-concise",
   "syntaxHighlightingDisabled": false,
   "alwaysThinkingEnabled": true,
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "autoUpdatesChannel": "latest",
   "voiceEnabled": true,
   "skipDangerousModePermissionPrompt": true
