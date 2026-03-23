@@ -1,0 +1,12 @@
+# Runtime/session data
+backups/
+cache/
+file-history/
+ide/
+sessions/
+shell-snapshots/
+history.jsonl
+mcp-needs-auth-cache.json
+plugins/
+projects/
+statsig/
