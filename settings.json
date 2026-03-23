@@ -7,8 +7,7 @@
     "deny": [
       "Read(**/.env)",
       "Read(**/.env.*)",
-      "Bash(rm *)",
-      "Bash(rmdir *)",
+      "Bash(rm -rf *)",
       "Bash(shred *)",
       "Bash(unlink *)",
       "Bash(dd *)",
@@ -25,8 +24,6 @@
       "Bash(curl *)",
       "Bash(wget *)",
       "Bash(ssh *)",
-      "Bash(scp *)",
-      "Bash(rsync *)",
       "Bash(kill *)",
       "Bash(killall *)",
       "Bash(pkill *)",
@@ -50,6 +47,13 @@
   "attribution": {
     "commit": "",
     "pr": ""
+  },
+  "cleanupPeriodDays": 90,
+  "feedbackSurveyRate": 0,
+  "spinnerTipsEnabled": false,
+  "spinnerVerbs": {
+    "mode": "replace",
+    "verbs": ["Working"]
   },
   "autoUpdatesChannel": "latest",
   "voiceEnabled": true,
