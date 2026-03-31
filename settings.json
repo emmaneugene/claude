@@ -57,5 +57,6 @@
   },
   "autoUpdatesChannel": "latest",
   "voiceEnabled": true,
-  "skipDangerousModePermissionPrompt": true
+  "skipDangerousModePermissionPrompt": true,
+  "showThinkingSummaries": true
 }
