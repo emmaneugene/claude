@@ -10,3 +10,4 @@ mcp-needs-auth-cache.json
 plugins/
 projects/
 statsig/
+memory/
