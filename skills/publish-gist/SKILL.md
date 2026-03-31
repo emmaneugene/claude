@@ -16,7 +16,7 @@ Publish a markdown file as a GitHub Gist. Local images and GIFs referenced in th
 ## Usage
 
 ```bash
-python3 scripts/publish-gist.py <markdown-file> [--name "filename"] [--public] [--desc "description"] [--web]
+python3 publish-gist.py <markdown-file> [--name "filename"] [--public] [--desc "description"] [--web]
 ```
 
 Run the script from this skill's directory using its absolute or relative path.
@@ -34,13 +34,13 @@ Run the script from this skill's directory using its absolute or relative path.
 
 ```bash
 # Publish a private gist
-python3 /path/to/publish-gist/scripts/publish-gist.py ./notes/writeup.md
+python3 /path/to/publish-gist/publish-gist.py ./notes/writeup.md
 
 # Publish a public gist with a description and custom name
-python3 /path/to/publish-gist/scripts/publish-gist.py ./docs/guide.md --name "Setup Guide" --public --desc "Setup guide"
+python3 /path/to/publish-gist/publish-gist.py ./docs/guide.md --name "Setup Guide" --public --desc "Setup guide"
 
 # Publish and open in browser
-python3 /path/to/publish-gist/scripts/publish-gist.py ./report.md --web
+python3 /path/to/publish-gist/publish-gist.py ./report.md --web
 ```
 
 ## How It Works
@@ -59,7 +59,7 @@ python3 /path/to/publish-gist/scripts/publish-gist.py ./report.md --web
 3. Ask for an optional description.
 4. Run the script:
    ```bash
-   python3 /absolute/path/to/publish-gist/scripts/publish-gist.py "/path/to/file.md" [flags]
+   python3 /absolute/path/to/publish-gist/publish-gist.py "/path/to/file.md" [flags]
    ```
 5. Report the gist URL back to the user.
 

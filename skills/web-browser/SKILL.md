@@ -1,34 +1,40 @@
 ---
 name: web-browser
-description: "Automates browser interactions with Playwright. Use for web scraping, testing, screenshots, form filling, or browsing pages."
+description: Browser automation via Chrome DevTools Protocol. Navigate, evaluate JS, take screenshots, pick elements, and extract content.
 ---
 
-# Web Browser Automation
+# Browser Tools
 
-Control a browser via Playwright MCP for web automation tasks.
+Browser automation using `dev-browser` (Playwright-based) with `cdp` for managing Chrome instances.
 
-## Core Workflow
+## Prerequisites
 
-1. **Navigate**: `browser_navigate` to a URL
-2. **Snapshot**: `browser_snapshot` to see page structure (better than screenshots for actions)
-3. **Interact**: Click, type, select using element refs from snapshot
-4. **Capture**: `browser_take_screenshot` for visual records
+- `dev-browser` — run `dev-browser --help` for full usage
+- `cdp` — run `cdp --help` for full usage
 
-## Key Tools
+## Two modes
 
-| Tool | Purpose |
-|------|---------|
-| `browser_navigate` | Go to URL |
-| `browser_snapshot` | Get accessibility tree (use for interactions) |
-| `browser_click` | Click element by ref |
-| `browser_type` | Type into input |
-| `browser_take_screenshot` | Capture visual |
-| `browser_fill_form` | Fill multiple fields |
-| `browser_wait_for` | Wait for text/element |
-| `browser_close` | Close browser |
+**Daemon-managed** — simplest, no setup needed:
+```bash
+dev-browser --browser myproject --headless <<'EOF'
+const page = await browser.getPage("main");
+await page.goto("https://example.com");
+EOF
+```
+`dev-browser` launches and manages its own Chromium. Add `--headless` for unattended runs; omit it to watch the window. Use `dev-browser browsers` to list instances.
 
-## Tips
+**Connect to a cdp-managed Chrome** — use when you need your real browser profile (cookies, logins, extensions) or want to attach to an already-running browser:
+```bash
+cdp start --name myproject          # blocks until ready; CDP URL printed on stdout
+dev-browser --connect http://localhost:9222 <<'EOF'
+const page = await browser.getPage("main");
+await page.goto("https://example.com");
+EOF
+cdp stop --name myproject
+```
 
-- Always use `browser_snapshot` before interactions to get element refs
-- Use `ref` parameter from snapshot for precise targeting
-- Screenshots are for visual verification, snapshots are for actions
+`cdp start` options: omit `--new-profile` to inherit your real profile, use `--name` for multiple instances, `--headless` for unattended runs.
+
+## Inspecting pages
+
+Use `page.snapshotForAI()` to get an AI-optimised accessibility tree for element discovery — prefer this over screenshots or raw HTML when you need to find and interact with elements.
