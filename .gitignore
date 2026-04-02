@@ -5,9 +5,14 @@ file-history/
 ide/
 sessions/
 shell-snapshots/
-history.jsonl
-mcp-needs-auth-cache.json
+memory/
+paste-cache/
+plans/
 plugins/
 projects/
 statsig/
-memory/
+tasks/
+history.jsonl
+policy-limits.json
+mcp-needs-auth-cache.json
+.last-cleanup
