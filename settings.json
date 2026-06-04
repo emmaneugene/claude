@@ -1,7 +1,12 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "cleanupPeriodDays": 90,
   "env": {
     "DISABLE_TELEMETRY": "1"
+  },
+  "attribution": {
+    "commit": "",
+    "pr": ""
   },
   "permissions": {
     "deny": [
@@ -21,41 +26,31 @@
       "Bash(git restore .)",
       "Bash(sudo *)",
       "Bash(su *)",
-      "Bash(curl *)",
-      "Bash(wget *)",
-      "Bash(ssh *)",
-      "Bash(kill *)",
-      "Bash(killall *)",
-      "Bash(pkill *)",
       "Bash(shutdown *)",
-      "Bash(reboot *)",
-      "Bash(chmod *)",
-      "Bash(chown *)"
+      "Bash(reboot *)"
     ],
-    "defaultMode": "bypassPermissions"
+    "defaultMode": "auto"
   },
-  "model": "sonnet[1m]",
+  "model": "claude-opus-4-8",
   "statusLine": {
     "type": "command",
     "command": "ccstatusline",
     "padding": 0
   },
   "enabledPlugins": {},
-  "syntaxHighlightingDisabled": false,
-  "alwaysThinkingEnabled": true,
-  "attribution": {
-    "commit": "",
-    "pr": ""
-  },
-  "cleanupPeriodDays": 90,
   "feedbackSurveyRate": 0,
   "spinnerTipsEnabled": false,
   "spinnerVerbs": {
     "mode": "replace",
-    "verbs": ["Working"]
+    "verbs": [
+      "Working"
+    ]
   },
+  "syntaxHighlightingDisabled": false,
+  "alwaysThinkingEnabled": true,
   "autoUpdatesChannel": "latest",
-  "voiceEnabled": true,
+  "showThinkingSummaries": true,
   "skipDangerousModePermissionPrompt": true,
-  "showThinkingSummaries": true
+  "theme": "dark",
+  "voiceEnabled": true
 }

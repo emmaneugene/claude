@@ -15,5 +15,4 @@ When writing documentation, use concrete examples over description, and use merm
 - ALWAYS use `uv` for running python
 - ALWAYS let the user know before installing any dependencies
 - NEVER commit or push without the user's explicit instruction
-- AGENTS.md is an authoritative memory source. If asked to remember something, update the most local AGENTS.md
 - Use `$TMPDIR` for working on small, short-lived files. If it's something the user should see, use `tmp/` instead
