@@ -1,8 +1,11 @@
 # Runtime/session data
 backups/
 cache/
+daemon/
 file-history/
 ide/
+image-cache/
+jobs/
 sessions/
 skills/
 shell-snapshots/
@@ -13,7 +16,8 @@ plugins/
 projects/
 statsig/
 tasks/
+daemon.log
 history.jsonl
-policy-limits.json
 mcp-needs-auth-cache.json
+policy-limits.json
 .last-cleanup
