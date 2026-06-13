@@ -9,32 +9,15 @@
     "pr": ""
   },
   "permissions": {
-    "deny": [
-      "Read(**/.env)",
-      "Read(**/.env.*)",
-      "Bash(rm -rf *)",
-      "Bash(shred *)",
-      "Bash(unlink *)",
-      "Bash(dd *)",
-      "Bash(mkfs *)",
-      "Bash(git push --force*)",
-      "Bash(git push -f*)",
-      "Bash(git reset --hard*)",
-      "Bash(git clean *)",
-      "Bash(git branch -D *)",
-      "Bash(git checkout .)",
-      "Bash(git restore .)",
-      "Bash(sudo *)",
-      "Bash(su *)",
-      "Bash(shutdown *)",
-      "Bash(reboot *)"
-    ],
-    "defaultMode": "auto"
+    "allow": [],
+    "deny": [],
+    "ask": [],
+    "defaultMode": "bypassPermissions"
   },
-  "model": "claude-opus-4-8",
+  "model": "opus",
   "statusLine": {
     "type": "command",
-    "command": "ccstatusline",
+    "command": "~/.claude/statusline.py",
     "padding": 0
   },
   "enabledPlugins": {},
@@ -48,9 +31,12 @@
   },
   "syntaxHighlightingDisabled": false,
   "alwaysThinkingEnabled": true,
+  "awaySummaryEnabled": false,
   "autoUpdatesChannel": "latest",
+  "tui": "fullscreen",
   "showThinkingSummaries": true,
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
+  "preferredNotifChannel": "ghostty",
   "voiceEnabled": true
 }
