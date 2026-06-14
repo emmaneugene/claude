@@ -25,12 +25,11 @@
   "spinnerTipsEnabled": false,
   "spinnerVerbs": {
     "mode": "replace",
-    "verbs": [
-      "Working"
-    ]
+    "verbs": ["Working"]
   },
   "syntaxHighlightingDisabled": false,
   "alwaysThinkingEnabled": true,
+  "effortLevel": "high",
   "awaySummaryEnabled": false,
   "autoUpdatesChannel": "latest",
   "tui": "default",

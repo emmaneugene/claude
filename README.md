@@ -14,4 +14,4 @@ ln -s /path/to/this/repo ~/.claude
 
 - **`CLAUDE.md`** — Global instructions injected into every Claude Code session
 - **`settings.json`** — Model, permissions, and UI preferences
-- **`skills/`** — Custom skills (see https://github.com/emmaneugene/agents)
+- **`skills/`** — Custom skills
