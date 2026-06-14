@@ -33,7 +33,7 @@
   "alwaysThinkingEnabled": true,
   "awaySummaryEnabled": false,
   "autoUpdatesChannel": "latest",
-  "tui": "fullscreen",
+  "tui": "default",
   "showThinkingSummaries": true,
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",

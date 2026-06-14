@@ -16,7 +16,9 @@ plugins/
 projects/
 statsig/
 tasks/
+daemon.lock
 daemon.log
+daemon.status.json
 history.jsonl
 mcp-needs-auth-cache.json
 policy-limits.json
