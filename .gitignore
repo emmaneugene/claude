@@ -22,4 +22,5 @@ daemon.status.json
 history.jsonl
 mcp-needs-auth-cache.json
 policy-limits.json
+stats-cache.json
 .last-cleanup

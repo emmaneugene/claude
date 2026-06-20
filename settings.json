@@ -12,9 +12,10 @@
     "allow": [],
     "deny": [],
     "ask": [],
-    "defaultMode": "bypassPermissions"
+    "defaultMode": "bypassPermissions",
+    "additionalDirectories": ["/tmp"]
   },
-  "model": "opus",
+  "model": "opus[1m]",
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.py",
@@ -32,10 +33,12 @@
   "effortLevel": "high",
   "awaySummaryEnabled": false,
   "autoUpdatesChannel": "latest",
-  "tui": "default",
+  "tui": "fullscreen",
+  "prefersReducedMotion": true,
   "showThinkingSummaries": true,
   "skipDangerousModePermissionPrompt": true,
   "theme": "dark",
   "preferredNotifChannel": "ghostty",
+  "autoCompactEnabled": true,
   "voiceEnabled": true
 }

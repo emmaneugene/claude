@@ -6,11 +6,12 @@ and prints two plain-text rows:
 
     1. current directory (with git branch) · session/thread id
     2. model + reasoning effort · context usage (used% / window size)
-       · rate-limit bars for the 5-hour and weekly windows
+       · session cost · rate-limit bars for the 5-hour and weekly windows
 
 Segments on a row are joined by a middot. The git branch is appended only
-inside a repo; the rate-limit segment is appended only once that data is
-available (after the first API response, Pro/Max accounts only).
+inside a repo; the cost segment appears once cost data is present; the
+rate-limit segment is appended only once that data is available (after the
+first API response, Pro/Max accounts only).
 """
 
 import json
@@ -118,6 +119,11 @@ def main() -> None:
     pct = ctx.get("used_percentage") or 0
     size_k = round((ctx.get("context_window_size") or 200000) / 1000)
     line2 = [label, f"{pct:.1f}%/{size_k}K"]
+
+    # Session cost, between context usage and the rate-limit bars.
+    cost = (data.get("cost") or {}).get("total_cost_usd")
+    if cost is not None:
+        line2.append(f"${cost:.2f}" if cost >= 0.01 else f"${cost:.3f}")
 
     # Line 2 also carries rate limits once available.
     rate_line = rate_limit_line(data)
